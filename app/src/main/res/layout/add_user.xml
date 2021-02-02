@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/AddEmail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_constraintTop_toTopOf='parent'
+        android:layout_constraintStart_toStartOf='parent'
+        android:layout_constraintEnd_toEndOf='parent'/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/AddEmail_Edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textEmailAddress"
+        >
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/AddPassword"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Password"
+        android:layout_constraintTop_toBottomOf='@id/AddEmail'
+        android:layout_constraintStart_toStartOf='parent'
+        android:layout_constraintEnd_toEndOf='parent'/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/AddPassword_Edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textPassword"
+        >
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Add_Account_Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_constraintTop_toBottomOf='@+id/AddPassword'
+        android:layout_constraintLeft_toLeftOf='parent'
+        android:layout_constraintRight_toRightOf='parent'
+        android:text="Add">
+    </com.google.android.material.button.MaterialButton>
+
+</LinearLayout>

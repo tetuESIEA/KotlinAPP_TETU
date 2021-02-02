@@ -1,18 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="@dimen/Standard_Margin"
+    tools:context=".Presentation.Main.MainActivity">
 
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Login_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint='login'
+        app:layout_constraitVertical_chainStyle="packed"
+        android:layout_constraintTop_toTopOf='parent'
+        android:layout_constraintStart_toStartOf='parent'
+        android:layout_constraintEnd_toEndOf='parent'
+        android:layout_constraintBottom_toTopOf='@+id/Password_input_layout'
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Login_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Password_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint='Password'
+        android:layout_constraintTop_toBottomOf='@+id/Login_input_layout'
+        android:layout_constraintStart_toStartOf='parent'
+        android:layout_constraintEnd_toEndOf='parent'
+        android:layout_constraintBottom_toTopOf='@+id/Login_Button'
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Password_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.button.MaterialButton
+    android:id="@+id/Login_Button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_constraintBottom_toTopOf='@+id/Create_Account_Button'
+    android:layout_constraintLeft_toLeftOf='parent'
+    android:layout_constraintRight_toRightOf='parent'
+    android:layout_constraintTop_toBottomOf='@+id/Password_input_layout'
+    android:text="login">
+</com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Create_Account_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="@dimen/Standard_Margin"
+        android:layout_constraintBottom_toBottomOf='parent'
+        android:layout_constraintLeft_toLeftOf='parent'
+        android:layout_constraintRight_toRightOf='parent'
+        android:layout_constraintTop_toBottomOf='@+id/Login_Button'
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Create Account">
+    </com.google.android.material.button.MaterialButton>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPokeList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
